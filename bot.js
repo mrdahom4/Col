@@ -9,6 +9,12 @@ const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const Canvas = require("canvas");
 const jimp = require("jimp");
 let points = {}
+const fs = require('fs');
+const moment = require('moment');
+const jimp = require('jimp');
+const Canvas = require('canvas');
+const invites = {};
+const wait = require('util').promisify(setTimeout);
 var prefix = "#";
 
 client.on('ready', () => {
@@ -717,6 +723,7 @@ client.on('message', message => {
         } else {
             h = message.member
         }
+               moment.locale('ar-TN');
       var id = new  Discord.RichEmbed()
       .setAuthor(message.author.username, message.author.avatarURL) 
     .setColor("#707070")
