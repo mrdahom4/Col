@@ -9,7 +9,6 @@ const Canvas = require("canvas");
 const jimp = require("jimp");
 const fs = require('fs');
 const moment = require('moment');
-const jimp = require('jimp');
 const invites = {};
 const wait = require('util').promisify(setTimeout);
 var prefix = "#";
